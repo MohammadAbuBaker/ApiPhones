@@ -1,0 +1,192 @@
+{
+	"info": {
+		"_postman_id": "3955b739-102d-4770-acec-8fec16bbb8dd",
+		"name": "PhonesApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "All Phones",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"grant_type\":\"password\",\n\t\"client_id\":\"2\",\n\t\"client_secrate\":\"iBIWMcjd0ePPzEn5MvLZm0Q1y3fSm5jEQ6LHZ61d\",\n\t\"username\":\"bakeriiuc@gmail.com\",\n\t\"password\":\"123456\"\n\t\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/phones",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"phones"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Single Phone Show",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"grant_type\":\"password\",\n\t\"client_id\":\"2\",\n\t\"client_secrate\":\"iBIWMcjd0ePPzEn5MvLZm0Q1y3fSm5jEQ6LHZ61d\",\n\t\"username\":\"bakeriiuc@gmail.com\",\n\t\"password\":\"123456\"\n\t\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/phones/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"phones",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Phones Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{auth}}",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"phoneName\":\"HUAWEI CE07\",\n\t\"phoneBrand\": \"HUAWEI\",\n\t\"phonePrice\":\"50000\"\n\t\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/phones",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"phones"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Phone",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{auth}}",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/phones/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"phones",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{auth}}",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"phoneName\":\"Samsung j10\",\n\t\"phoneBrand\": \"Samsung\",\n\t\"phonePrice\":\"10000\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/phones/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"phones",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
